@@ -1,0 +1,78 @@
+--- 
+title: 'Level 1: Bioinformatics workflow applied to transcriptomics'
+author: "Anya Greenberg"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography:
+- book.bib
+- packages.bib
+description: |
+  Information and resources for STEM-Away's Bioinformatics pathway - level 1 project.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Project definition {-}
+
+## Recommended pre-requisites {-}
+
+- Basic understanding of genetics
+- Beginner experience with R, Python, or an equivalent statistical language
+
+## Technical requirements {-}
+
+- 8 GB RAM
+- 5 GB free disk space
+
+If you don't meet the requirements above, contact &commat;anya on the STEM-Away forums.
+
+## Objectives {-}
+
+1. Learn about the important concepts of bioinformatics spanning computer science, statistics, and biology.
+2. Understand a generalized workflow for transcriptomic analysis of microarray data.
+3. Implement workflow in intern-led research project.
+
+### Technical skills objectives {-}
+- Learn about important concepts of bioinformatics
+  - Computer science
+    - Data structures
+    - Data analysis and visualization
+    - Functions and abstraction
+  - Introduction to statistics for bioinformatics
+    - Hypothesis testing
+    - Clustering and similariyt metrics
+  - Introduction to transcriptomics
+- Application of generalized workflow for transcriptomic analysis
+  - Data acquisition from NCBI's [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) (GEO)
+  - Quality control - inter-array vs. intra-array
+  - Differential gene expression (using linear modeling)
+  - Computational functional analysis
+    - Enrichment
+    - Over-representation
+    - Pathway/ networks
+- Use R programming and other bioinformatic tools in transcriptomic research
+  - R syntax, pacakges, documentation, and troubleshooting
+  - [Database for Annotation, Visualization, and Integrated Discover](https://david.ncifcrf.gov/) (DAVID)
+  - [Enrichr](https://maayanlab.cloud/Enrichr/)
+  - [Metascape: a gene anotation and analysis resource](https://metascape.org/gp/index.html#/main/step1)
+  - [STRING: functional protein association networks](https://string-db.org/)
+  - [Gene Expression Profiling Interactive Analysis](http://gepia.cancer-pku.cn/) (GEPIA)
+- Research practices
+  - Critical thinking
+  - Literature searches
+  - Telling a story
+  
+### Soft skills objectives {-}
+
+- Project and time management
+- Virtual collaboration and teamwork
+- Technical and project presentations
+- Leadership and mentoriing (student leads)
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

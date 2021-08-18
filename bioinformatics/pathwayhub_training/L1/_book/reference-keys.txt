@@ -1,0 +1,14 @@
+introduction-part-1-understanding-the-basics
+r-programming-and-rstudio
+installing-r-and-rstudio
+instructions
+math-concepts-for-bioinformatics
+ncbi-resources-pubmed-and-geo
+project-design-and-hypothesis-formation
+r-programming-and-rstudio-1
+microarray-sequencing
+ncbi-resources-geo2r
+quality-control
+differential-gene-expression-analysis
+computational-functional-analysis-r-and-web-tools
+what-now-further-analyses

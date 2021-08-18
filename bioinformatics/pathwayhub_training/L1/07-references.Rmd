@@ -1,0 +1,5 @@
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+
+Portions of this material are derived from RStudio's '[lesson title]

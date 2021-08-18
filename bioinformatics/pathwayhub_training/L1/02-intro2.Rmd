@@ -1,0 +1,7 @@
+# Project design and hypothesis formation
+
+## R programming and RStudio
+
+## Microarray sequencing
+
+## NCBI resources: GEO2R

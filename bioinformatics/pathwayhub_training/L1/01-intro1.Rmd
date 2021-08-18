@@ -1,0 +1,31 @@
+# Introduction, part 1: Understanding the basics 
+
+## R programming and RStudio
+
+### Installing R and RStudio
+R is a free software environment for statistical computing and graphics. Find out more at the [R project site](https://www.r-project.org/).
+
+RStudio is an integrated development environment (IDE*) for R. Find out more at the [RStudio site](https://www.rstudio.com/products/rstudio/).
+
+#### Instructions
+
+1. Download [Rv4](https://cran.r-project.org/mirrors.html) (as of August 2021)
+    a. Select mirror* site that is closest to your geographic location.
+    b. Select appropriate link for OS (Linux, MacOS, Windows).
+    c. Download `base`, run and follow the instructions.
+    d. *If on windows*, download `Rtools`, run and follow the instructions.
+2. Download [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).  
+
+Yay! You're ready to start programming!
+
+3. Open RStudio and install the [`tidyverse`](https://www.tidyverse.org/) package.
+4. Load the `tidyverse` library.
+
+> **HINT**: You will need the functions `install.packages()` and `library()`. If you type `?function_name()` into the *console panel* of RStudio and hit enter, you will be able to see the docuumentation of the function in the *help panel*. This documentation will tell you the inputs and outputs for that function. At the bottom of the *help panel* will be a few examples of the function's usage. More information on R documentation can be found [TODO].
+
+![](figures/rstudio_gui.png)
+
+
+## Math concepts for bioinformatics
+
+## NCBI resources: PubMed and GEO
