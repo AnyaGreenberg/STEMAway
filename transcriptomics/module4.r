@@ -7,7 +7,7 @@ library(EnhancedVolcano)
 library(pheatmap)
 
 rma <- read.table('data/GSE8671_rma.csv', sep=',')
-
+rma <- rma[,-c(13,43)]
 
 ## ANNOTAIONS
 symbols <- AnnotationDbi::select(hgu133plus2.db, keys=rownames(rma), columns=c('SYMBOL', 'ENTREZID'))
@@ -24,15 +24,16 @@ rownames(rma) <- rma$SYMBOL
 
 
 ## GENE FILTERING
-means <- rowMeans(rma[,1:64])
+means <- rowMeans(rma[,1:62])
 perc2 <- as.numeric(quantile(means, probs=0.02, na.rm=TRUE))
 
-filt <- rma[which(means >= perc2),1:64]
+filt <- rma[which(means >= perc2),1:62]
 write.table(filt, 'data/GSE8671_filtered.csv', col.names=TRUE, row.names=TRUE, quote=FALSE, sep=',')
 
 
 ## LIMMA
 meta <- read.csv('data/GSE8671_metadata.csv', sep='\t')
+meta <- meta[-c(13,43),]
 Tissue <- factor(meta$Tissue, levels=c('ADENOMA', 'NORMAL'), order=FALSE)
 row.names(meta) <- meta$Sample
 design <- model.matrix(~0+Tissue, meta)
@@ -66,4 +67,3 @@ hdf <- filt[row.names(filt) %in% hgenes$ID,]
 group <- data.frame(Location=meta$Location)
 row.names(group) <- meta$Sample
 pheatmap(hdf, annotation_col=group, cluster_rows=T, main="Top DEG") 
-         # annotation_colors=list(Tissue=c(ADENOMA="hotpink1", NORMAL="navy")))
