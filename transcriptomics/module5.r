@@ -7,7 +7,7 @@ library(enrichplot)
 library(msigdbr)
 library(ggnewscale) #for cnetplot
 
-# ENRICHMENT (UP-REGULATED GENES)
+# OVER-REPRESENTAITON (UP-REGULATED GENES)
 ## GENE LIST
 ### vector of logFC values, named with gene symbol, sorted in decreasing order - filter for most differentially expressed
 tT <- read.table('data/dge.csv', sep=',', header=TRUE) %>%
@@ -50,7 +50,7 @@ cnetplot(tfnet, foldChange=deg_logfc, categorySize='p.adjust', colorEdge=TRUE)
 write.table(names(deg_logfc), 'data/deg.up.txt', row.names=FALSE, col.names=FALSE, quote=FALSE)
 
 
-# OVER-REPRESENTATION
+# ENRICHMENT
 ## GSEA
 ### GENE LIST
 ### vector of logFC values, named with ENTREZID, sorted in decreasing order - include all genes
