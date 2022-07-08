@@ -44,7 +44,7 @@ fit <- contrasts.fit(lm, contrast)
 efit <- eBayes(fit)
 
 tT <- topTable(efit, p.value=0.05, adjust.method='fdr', sort.by='logFC', genelist=row.names(filt), number=length(row.names(efit)))
-
+write.table(tT, 'data/dge.csv', sep=',', quote=FALSE, row.names=FALSE, col.names=TRUE)
 
 ## Volcano plot
 EnhancedVolcano(tT, lab=tT$ID, x='logFC', y='adj.P.Val', 
