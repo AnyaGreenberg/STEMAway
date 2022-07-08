@@ -33,6 +33,7 @@ barplot(go_mf, title='Molecular function')
 kegg <- enrichKEGG(deg_entrez$ENTREZID)
 dotplot(kegg, title='Enriched KEGG pathways')
 
+# NETWORK
 ## GENE-CONCEPT NETWORK
 gcnet <- setReadable(kegg, org.Hs.eg.db, keyType='ENTREZID') #map ENTREZID to gene symbol
 cnetplot(gcnet, foldChange=deg_logfc, categorySize='p.adjust', colorEdge=TRUE)
